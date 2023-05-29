@@ -1,2 +1,2 @@
 * Instructions
- - Place this into ~~/.emacs.d/~ or wherever your config directory is.
+ - Place this into ~/.emacs.d/ or wherever your config directory is.
