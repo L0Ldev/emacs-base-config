@@ -15,6 +15,7 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
 (load bootstrap-file nil 'nomessage))
+(straight-use-package 'use-package)
 (setq-default straight-use-package-by-default t)
 (load-theme 'modus-vivendi nil)
 
@@ -116,8 +117,6 @@
    ("C-h C" . helpful-command)
    ("C-c C-d" . helpful-at-point)))
 
-(use-package treesit-auto
-  :config (global-treesit-auto-mode))
 ;; (use-package bufler ;; makes `switch-buffer` nicer, but more verbose
 ;; 	:demand t
 ;; 	:config (bufler-mode)
@@ -164,7 +163,6 @@
 
 ;; LSP
 (use-package eglot
-  :straight nil
   :requires (orderless cape)
   :defer t
   :custom (completion-category-overrides '((eglot (styles orderless))))
